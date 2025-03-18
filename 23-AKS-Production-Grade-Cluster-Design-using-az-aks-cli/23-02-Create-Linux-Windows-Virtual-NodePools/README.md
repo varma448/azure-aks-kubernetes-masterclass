@@ -78,8 +78,8 @@ Kalyans-Mac-mini:~ kalyanreddy$
 ### Step-03-01: Create Linux User Node Pool
 ```
 # Create New Linux Node Pool 
-az aks nodepool add --resource-group ${AKS_RESOURCE_GROUP} \
-                    --cluster-name ${AKS_CLUSTER} \
+az aks nodepool add --resource-group aks-prod \
+                    --cluster-name aksprod1 \
                     --name linux101 \
                     --node-count 1 \
                     --enable-cluster-autoscaler \
@@ -116,8 +116,8 @@ kubectl get nodes -o wide -l app=java-apps
 ### Step-04-01: Create Windows Node Pool
 ```
 # Create New Windows Node Pool 
-az aks nodepool add --resource-group ${AKS_RESOURCE_GROUP} \
-                    --cluster-name ${AKS_CLUSTER} \
+az aks nodepool add --resource-group aks-prod \
+                    --cluster-name aksprod1 \
                     --os-type Windows \
                     --name win101 \
                     --node-count 1 \
